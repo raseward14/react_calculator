@@ -1,19 +1,51 @@
 .App * {
-    /* text-align: center; */
-    margin: 0px auto;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} 
+    text-align: center;
+}
 
-.calc-container {
-    margin: 50%;
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .calc-wrapper {
-    margin-top: 50%;
+    font-variation-settings: 'wght' 50;
+    font-family: Tahoma, sans-serif;
+    margin: 10% auto;
+    padding: 0%;
+    opacity: 0.65;
     height: 37vh;
     width: 20vw;
     border: solid 1px black;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(6, 6, 6, 0.718);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.calc-wrapper>* {
+    flex: 1 100%;
+}
+
+.return {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: rgb(1, 1, 1);
+    height: 25%;
+    color: white;
+    font-size: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.return>* {
+    /* font-weight: lighter; */
+    margin-right: 5%;
+}
+
+/* .value {
+} */
+
+.interface {
+    /* flex-grow: 3.5; */
 }
