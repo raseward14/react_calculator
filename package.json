@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "scripts": {
+    "start": "cd client && npm start"
   }
 }
