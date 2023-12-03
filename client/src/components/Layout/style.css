@@ -14,7 +14,7 @@ h1 {
 .calc-wrapper {
     margin: 10% auto;
     padding: 0%;
-    opacity: 0.65;
+    opacity: 0.75;
     height: 37vh;
     width: 20vw;
     border-radius: 15px;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .left {
-    flex-grow: 3;
+    flex-grow: 4;
     display: flex;
 }
 
@@ -78,7 +78,7 @@ h1 {
     flex-grow: 1;
 }
 .right {
-    background-color: orange;
+    background-color: rgb(251, 147, 0);
     flex-grow: 1;
     border-bottom-right-radius: 15px;
 }
