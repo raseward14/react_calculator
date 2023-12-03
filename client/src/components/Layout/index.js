@@ -15,32 +15,65 @@ const Layout = () => {
                 <tbody className='interface-container'>
                     <tr className='interface'>
                         <th className='left'>
-                            <tr className='c-container'>
+                            <tr className='top-row'>
                                 <th className='left-columns'>
-                                    <tr className='left-row'>AC</tr>
-                                    <tr className='left-row'>7</tr>
-                                    <tr className='left-row'>4</tr>
-                                    <tr className='left-row'>1</tr>
-                                    <tr className='left-row left-corner'>5</tr>
+                                    <tr className='left-row'>
+                                        <td>AC</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>1</td>
+                                    </tr>
                                 </th>
                                 <th className='left-columns'>
-                                    <tr className='left-row'>+/-</tr>
-                                    <tr className='left-row'>8</tr>
-                                    <tr className='left-row'>5</tr>
-                                    <tr className='left-row'>2</tr>
-                                    <tr className='left-row'>2</tr>
+                                    <tr className='left-row'>
+                                        <td>+/-</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>2</td>
+                                    </tr>
                                 </th>
                                 <th className='left-columns'>
-                                    <tr className='left-row'>%</tr>
-                                    <tr className='left-row'>9</tr>
-                                    <tr className='left-row'>6</tr>
-                                    <tr className='left-row'>3</tr>
-                                    <tr className='left-row'>.</tr>
+                                    <tr className='left-row'>
+                                        <td>%</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr className='left-row'>
+                                        <td>3</td>
+                                    </tr>
+                                </th>
+                            </tr>
+                            <tr className='bottom-row'>
+                                <th className='left-row left-corner'>
+                                    <tr>
+                                        <td>0</td>
+                                    </tr>
+                                </th>
+                                <th className='left-row period'>
+                                    <tr>
+                                        <td>.</td>
+                                    </tr>
                                 </th>
                             </tr>
                         </th>
                         <th className='right'>
-                        <tr className='right-row bold'>÷</tr>
+                            <tr className='right-row bold'>÷</tr>
                             <tr className='right-row bold'>x</tr>
                             <tr className='right-row bold'>-</tr>
                             <tr className='right-row bold'>+</tr>
