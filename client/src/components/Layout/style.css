@@ -63,8 +63,7 @@ h1 {
 
 .top-row {
     display: flex;
-    flex-grow: 12;
-    /* width: 100%; */
+    flex-grow: 5;
 }
 .left-columns {
     display: flex;
@@ -84,7 +83,6 @@ h1 {
     margin: auto;
 }
 
-
 .right {
     background-color: rgb(251, 147, 0);
     flex-grow: 1;
@@ -92,17 +90,15 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 0px;
-}
-
-/* th.right-row  {
     border: 1px solid rgba(6, 6, 6, 0.718);
-} */
-
+}
 .right-row {
-    flex-grow: 1;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    border: 1px solid black;
+    height: 100%;
+}
+.right-row > * {
     margin: auto;
 }
 

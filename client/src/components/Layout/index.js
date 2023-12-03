@@ -73,11 +73,21 @@ const Layout = () => {
                             </tr>
                         </th>
                         <th className='right'>
-                            <tr className='right-row bold'>÷</tr>
-                            <tr className='right-row bold'>x</tr>
-                            <tr className='right-row bold'>-</tr>
-                            <tr className='right-row bold'>+</tr>
-                            <tr className='right-row right-corner bold'>=</tr>
+                            <tr className='right-row bold'>
+                                <td>÷</td>
+                            </tr>
+                            <tr className='right-row bold'>
+                                <td>x</td>
+                            </tr>
+                            <tr className='right-row bold'>
+                                <td>-</td>
+                            </tr>
+                            <tr className='right-row bold'>
+                                <td>+</td>
+                            </tr>
+                            <tr className='right-row right-corner bold'>
+                                <td>=</td>
+                            </tr>
                         </th>
                     </tr>
                 </tbody>
