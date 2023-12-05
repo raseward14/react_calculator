@@ -71,16 +71,23 @@ h1 {
     flex-grow: 1;
     padding: 0px;
 }
-.left-columns > * {
-    flex-grow: 1;
-}
 .left-row {
     display: flex;
-    align-items: center;
     border: 1px solid black;
+    flex-grow: 1;
 }
 .left-row > * {
     margin: auto;
+}
+
+.left-center-row {
+    display: flex;
+    border: 1px solid black;
+    flex-grow: 0.159;
+}
+.left-center-row > * {
+    margin: auto;
+
 }
 
 .right {
@@ -117,13 +124,17 @@ h1 {
     flex-grow: 1;
     width: 100%;
 }
-.left-corner {
+/* .left-corner {
     border-bottom-left-radius: 15px;
     flex-grow: 2.4;
     padding: 0px;
-}
-.left-corner > * {
+} */
+/* .left-corner > * {
     margin-left: 45%;
+} */
+.left-corner-test {
+    border-bottom-left-radius: 15px;
+
 }
 
 .period {
