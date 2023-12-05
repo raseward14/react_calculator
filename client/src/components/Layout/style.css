@@ -134,6 +134,7 @@ h1 {
 } */
 .left-corner-test {
     border-bottom-left-radius: 15px;
+    width: 200%;
 
 }
 
