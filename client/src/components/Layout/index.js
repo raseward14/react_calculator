@@ -3,6 +3,16 @@ import './style.css';
 
 const Layout = () => {
 
+    // when numbers are clicked we concat to create a number
+    // we need to dynamically generate numbers in this function
+    const createNumber = (value) => {
+        console.log(value)
+    };
+
+    // when operators are clicked; store number, add operator to our expression
+    const operatorClicked = () => {
+
+    };
 
     return (
         <div className='App'>
@@ -14,76 +24,113 @@ const Layout = () => {
                 </thead>
                 <tbody className='interface-container'>
                     <tr className='interface'>
-                        <th className='left-container'>
+                        <tr className='left-container'>
                             <tr className='left-side'>
-                                <th className='left-columns'>
+                                <tr className='left-columns'>
                                     <tr className='left-row'>
-                                        <td>AC</td>
+                                        <td onClick={() => {
+                                            operatorClicked('AC');
+                                        }}>AC</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>7</td>
+                                        <td onClick={() => {
+                                            createNumber(7);
+                                        }}>7</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>4</td>
+                                        <td onClick={() => {
+                                            createNumber(4);
+                                        }}>4</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>1</td>
+                                        <td onClick={() => {
+                                            createNumber(1);
+                                        }}>1</td>
                                     </tr>
                                     <tr className='left-row left-corner'>
-                                        <td>0</td>
+                                        <td onClick={() => {
+                                            createNumber(0);
+                                        }}>0</td>
                                     </tr>
-                                </th>
-                                <th className='left-center-column'>
+                                </tr>
+                                <tr className='left-center-column'>
                                     <tr className='left-center-row'>
-                                        <td>+/-</td>
-                                    </tr>
-                                    <tr className='left-center-row'>
-                                        <td>8</td>
-                                    </tr>
-                                    <tr className='left-center-row'>
-                                        <td>5</td>
+                                        <td onClick={() => {
+                                            operatorClicked('+');
+                                        }}>+/-</td>
                                     </tr>
                                     <tr className='left-center-row'>
-                                        <td>2</td>
+                                        <td onClick={() => {
+                                            createNumber(8);
+                                        }}>8</td>
                                     </tr>
-                                </th>
-                                <th className='left-columns'>
+                                    <tr className='left-center-row'>
+                                        <td onClick={() => {
+                                            createNumber(5);
+                                        }}>5</td>
+                                    </tr>
+                                    <tr className='left-center-row'>
+                                        <td onClick={() => {
+                                            createNumber(2);
+                                        }}>2</td>
+                                    </tr>
+                                </tr>
+                                <tr className='left-columns'>
                                     <tr className='left-row'>
-                                        <td>%</td>
+                                        <td onClick={() => {
+                                            operatorClicked('/100');
+                                        }}>%</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>9</td>
+                                        <td onClick={() => {
+                                            createNumber(9);
+                                        }}>9</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>6</td>
+                                        <td onClick={() => {
+                                            createNumber(6);
+                                        }}>6</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>3</td>
+                                        <td onClick={() => {
+                                            createNumber(3);
+                                        }}>3</td>
                                     </tr>
                                     <tr className='left-row'>
-                                        <td>.</td>
+                                        <td onClick={() => {
+                                            createNumber('.');
+                                        }}>.</td>
                                     </tr>
-
-                                </th>
+                                </tr>
                             </tr>
-                        </th>
-                        <th className='right-side'>
+                        </tr>
+                        <tr className='right-side'>
                             <tr className='right-row big'>
-                                <td>÷</td>
+                                <td onClick={() => {
+                                    operatorClicked('/');
+                                }}>÷</td>
                             </tr>
                             <tr className='right-row big'>
-                                <td>x</td>
+                                <td onClick={() => {
+                                    operatorClicked('x');
+                                }}>x</td>
                             </tr>
                             <tr className='right-row big'>
-                                <td>-</td>
+                                <td onClick={() => {
+                                    operatorClicked('-');
+                                }}>-</td>
                             </tr>
                             <tr className='right-row big'>
-                                <td>+</td>
+                                <td onClick={() => {
+                                    operatorClicked('+');
+                                }}>+</td>
                             </tr>
                             <tr className='right-row right-corner bold'>
-                                <td>=</td>
+                                <td onClick={() => {
+                                    operatorClicked('=');
+                                }}>=</td>
                             </tr>
-                        </th>
+                        </tr>
                     </tr>
                 </tbody>
             </table>
