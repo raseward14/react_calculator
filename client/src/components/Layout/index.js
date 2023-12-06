@@ -3,13 +3,15 @@ import './style.css';
 
 const Layout = () => {
 
-    // when numbers are clicked we concat to create a number
-    // we need to dynamically generate numbers in this function
+    // when numbers are clicked we concat to create a value, display in return
     const createNumber = (value) => {
         console.log(value)
     };
 
-    // when operators are clicked; store number, add operator to our expression
+    // this stops when an operator is clicked, then we need to store that value, and operator - go back to number generator function
+        // if a prior number exists, execute -> value1, operator, value2 -> display in return state variable
+
+    // when operators are clicked; store value, add operator
     const operatorClicked = () => {
 
     };

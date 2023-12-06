@@ -63,7 +63,7 @@
 }
 .left-row {
     display: flex;
-    border: 1px solid black;
+    border: 0.5px solid black;
     flex-grow: 1;
 }
 .left-row > * {
@@ -79,7 +79,7 @@
 }
 .left-center-row {
     display: flex;
-    border: 1px solid black;
+    border: 0.5px solid black;
     height: 80%;
 }
 .left-center-row > * {
@@ -96,7 +96,7 @@
 }
 .right-row {
     display: flex;
-    border: 1px solid black;
+    border: 0.5px solid black;
     height: 100%;
 }
 .right-row > * {
