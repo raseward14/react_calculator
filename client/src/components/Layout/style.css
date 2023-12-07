@@ -87,7 +87,7 @@
 }
 
 .right-side {
-    background-color: rgb(251, 147, 0);
+    background-color: rgb(251, 134, 0);
     flex-grow: 1;
     border-bottom-right-radius: 15px;
     display: flex;
@@ -114,4 +114,9 @@
 .left-corner {
     border-bottom-left-radius: 15px;
     width: 200%;
+}
+
+.darker {
+    background-color: rgba(6, 6, 6, 0.718);
+
 }

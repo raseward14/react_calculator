@@ -109,7 +109,7 @@ const Layout = () => {
                         <tr className='left-container'>
                             <tr className='left-side'>
                                 <tr className='left-columns'>
-                                    <tr className='left-row'
+                                    <tr className='left-row darker'
                                         onClick={() => {
                                             clearValues('C');
                                         }}>
@@ -141,7 +141,7 @@ const Layout = () => {
                                     </tr>
                                 </tr>
                                 <tr className='left-center-column'>
-                                    <tr className='left-center-row'
+                                    <tr className='left-center-row darker'
                                         onClick={() => {
                                             operatorClicked('+');
                                         }}>
@@ -167,7 +167,7 @@ const Layout = () => {
                                     </tr>
                                 </tr>
                                 <tr className='left-columns'>
-                                    <tr className='left-row'
+                                    <tr className='left-row darker'
                                         onClick={() => {
                                             operatorClicked('/100');
                                         }}>
