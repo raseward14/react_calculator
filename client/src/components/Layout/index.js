@@ -88,8 +88,12 @@ const Layout = () => {
     // when a value exists, AC changes to C
 
     // when C is clicked, clear all values, and operators
-    const clearValues = (value) => {
-        if(value === "C") {
+    const clearValues = () => {
+        if(value1 === "") {
+            setClear("AC");
+        } else if((value1 !== "") && (operator !== null)) {
+            setOperator(null)
+        } else {
             setClear("AC");
             setValue1("");
             setDisplay(0);
@@ -111,7 +115,7 @@ const Layout = () => {
                                 <tr className='left-columns'>
                                     <tr className='left-row darker'
                                         onClick={() => {
-                                            clearValues('C');
+                                            clearValues();
                                         }}>
                                         <td>{clear}</td>
                                     </tr>
