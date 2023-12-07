@@ -8,12 +8,20 @@ const Layout = () => {
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");
     const [operator, setOperator] = useState(null);
+    const [clear, setClear] = useState("AC");
 
     // when numbers are clicked we concat to create a value, display in return
     const createNumber = (value) => {
-        let newValue = "" + value1 + value
-        setValue1(newValue);
-        setDisplay(newValue);
+        if (value1 === "") {
+            let newValue = "" + value1 + value;
+            setValue1(newValue);
+            setDisplay(newValue);
+            setClear("C");
+        } else {
+            let secondValue = "" + value2 + value;
+            setValue2(secondValue);
+            setDisplay(secondValue);
+        }
     };
 
     // this stops when an operator is clicked, then we need to store that value, and operator - go back to number generator function
@@ -21,7 +29,50 @@ const Layout = () => {
 
     // when operators are clicked; store value, add operator
     const operatorClicked = (value) => {
-        console.log(value)
+        if (operator === null) {
+            setOperator(value);
+            console.log(value);
+        } else {
+            switch (operator) {
+                case "÷":
+                    {
+
+                    }
+                    const divide = () => {
+                        let newDisplay = value1 / value2;
+                        setDisplay(newDisplay);
+                    };
+                    break;
+                case "x":
+                    const multiply = () => {
+                        let newDisplay = value1 * value2;
+                        setDisplay(newDisplay);
+
+                    };
+                    break;
+                case "-":
+                    const subtract = () => {
+                        let newDisplay = value1 - value2;
+                        setDisplay(newDisplay);
+                    };
+                    break;
+                case "+":
+                    {
+                        const add = () => {
+                            console.log('made it here');
+                            let newDisplay = JSON.parse(value1) + JSON.parse(value2);
+                            setDisplay(newDisplay);
+                        };
+                        add();
+                    };
+                    break;
+                default:
+                    const equal = () => {
+                        setValue1(value2);
+                    };
+                    break;
+            }
+        }
     };
 
     // when percent is clicked, change the value, move decimal place twice to the left
@@ -31,6 +82,13 @@ const Layout = () => {
     // when a value exists, AC changes to C
 
     // when C is clicked, clear all values, and operators
+    const clearValues = (value) => {
+        if(value === "C") {
+            setClear("AC");
+            setValue1("");
+            setDisplay(0);
+        }
+    }
 
     return (
         <div className='App'>
@@ -47,9 +105,9 @@ const Layout = () => {
                                 <tr className='left-columns'>
                                     <tr className='left-row'
                                         onClick={() => {
-                                            operatorClicked('AC');
+                                            clearValues('C');
                                         }}>
-                                        <td>AC</td>
+                                        <td>{clear}</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
@@ -61,19 +119,19 @@ const Layout = () => {
                                         onClick={() => {
                                             createNumber(4);
                                         }}>
-                                        <td >4</td>
+                                        <td>4</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
                                             createNumber(1);
                                         }}>
-                                        <td >1</td>
+                                        <td>1</td>
                                     </tr>
                                     <tr className='left-row left-corner'
                                         onClick={() => {
                                             createNumber(0);
                                         }}>
-                                        <td >0</td>
+                                        <td>0</td>
                                     </tr>
                                 </tr>
                                 <tr className='left-center-column'>
@@ -81,25 +139,25 @@ const Layout = () => {
                                         onClick={() => {
                                             operatorClicked('+');
                                         }}>
-                                        <td >+/-</td>
+                                        <td>+/-</td>
                                     </tr>
                                     <tr className='left-center-row'
                                         onClick={() => {
                                             createNumber(8);
                                         }}>
-                                        <td >8</td>
+                                        <td>8</td>
                                     </tr>
                                     <tr className='left-center-row'
                                         onClick={() => {
                                             createNumber(5);
                                         }}>
-                                        <td >5</td>
+                                        <td>5</td>
                                     </tr>
                                     <tr className='left-center-row'
                                         onClick={() => {
                                             createNumber(2);
                                         }}>
-                                        <td >2</td>
+                                        <td>2</td>
                                     </tr>
                                 </tr>
                                 <tr className='left-columns'>
@@ -107,31 +165,31 @@ const Layout = () => {
                                         onClick={() => {
                                             operatorClicked('/100');
                                         }}>
-                                        <td >%</td>
+                                        <td>%</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
                                             createNumber(9);
                                         }}>
-                                        <td >9</td>
+                                        <td>9</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
                                             createNumber(6);
                                         }}>
-                                        <td >6</td>
+                                        <td>6</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
                                             createNumber(3);
                                         }}>
-                                        <td >3</td>
+                                        <td>3</td>
                                     </tr>
                                     <tr className='left-row'
                                         onClick={() => {
                                             createNumber('.');
                                         }}>
-                                        <td >.</td>
+                                        <td>.</td>
                                     </tr>
                                 </tr>
                             </tr>
@@ -141,31 +199,31 @@ const Layout = () => {
                                 onClick={() => {
                                     operatorClicked('/');
                                 }}>
-                                <td >÷</td>
+                                <td>÷</td>
                             </tr>
                             <tr className='right-row big'
                                 onClick={() => {
                                     operatorClicked('x');
                                 }}>
-                                <td >x</td>
+                                <td>x</td>
                             </tr>
                             <tr className='right-row big'
                                 onClick={() => {
                                     operatorClicked('-');
                                 }}>
-                                <td >-</td>
+                                <td>-</td>
                             </tr>
                             <tr className='right-row big'
                                 onClick={() => {
                                     operatorClicked('+');
                                 }}>
-                                <td >+</td>
+                                <td>+</td>
                             </tr>
                             <tr className='right-row right-corner bold'
                                 onClick={() => {
                                     operatorClicked('=');
                                 }}>
-                                <td >=</td>
+                                <td>=</td>
                             </tr>
                         </tr>
                     </tr>
