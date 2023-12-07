@@ -36,25 +36,31 @@ const Layout = () => {
             switch (operator) {
                 case "÷":
                     {
-
+                        const divide = () => {
+                            let newDisplay = JSON.parse(value1) / JSON.parse(value2);
+                            setDisplay(newDisplay);
+                        };
+                        divide();
                     }
-                    const divide = () => {
-                        let newDisplay = value1 / value2;
-                        setDisplay(newDisplay);
-                    };
                     break;
                 case "x":
-                    const multiply = () => {
-                        let newDisplay = value1 * value2;
-                        setDisplay(newDisplay);
-
-                    };
+                    {
+                        const multiply = () => {
+                            let newDisplay = JSON.parse(value1) * JSON.parse(value2);
+                            setDisplay(newDisplay);
+    
+                        };
+                        multiply();
+                    }
                     break;
                 case "-":
-                    const subtract = () => {
-                        let newDisplay = value1 - value2;
-                        setDisplay(newDisplay);
-                    };
+                    {
+                        const subtract = () => {
+                            let newDisplay = JSON.parse(value1) - JSON.parse(value2);
+                            setDisplay(newDisplay);
+                        };
+                        subtract();
+                    }
                     break;
                 case "+":
                     {
