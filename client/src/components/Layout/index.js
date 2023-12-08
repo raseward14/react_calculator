@@ -25,7 +25,7 @@ const Layout = () => {
             setDisplay(newValue);
             setClear("C");
         // if an operator exists, neither condition above will be met, and we build value2
-        } else if((value2 === "") && (operator !== null)) {
+        } else if((value2 === "") && (operator !== null || "cleared")) {
             let secondValue = "" + value;
             setValue2(secondValue);
             setDisplay(secondValue);
@@ -102,23 +102,30 @@ const Layout = () => {
 
     // when C is clicked, clear all values, and operators
     const clearValues = () => {
-        if(value1 !== "" && (operator === null) && (value2 === "")) {
+        if(value1 !== "" && ((operator === null) || (operator === "cleared")) && (value2 === "")) {
             setValue1("");
             setDisplay(0);
             setClear("AC");
+            console.log('clear value1 only')
+            console.log(operator)
         } else if((value1 !== "") && (operator !== null) && (value2 === "")) {
-            setOperator(null)
+            setOperator("cleared")
             setClear("AC");
+            console.log('clear operator only')
         } else if((value1 !== "") && (operator !== null) && (value2 !== "")) {
             setValue2("")
             setDisplay(0);
             setClear("AC");
+            console.log('clear value2 only')
+
         } else {
             setValue1("");
             setValue2("");
             setOperator(null)
             setDisplay(0);
             setClear("AC");
+            console.log('clear everything')
+
         }
     }
 
