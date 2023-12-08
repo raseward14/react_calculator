@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 const Layout = () => {
@@ -12,15 +12,29 @@ const Layout = () => {
 
     // when numbers are clicked we concat to create a value, display in return
     const createNumber = (value) => {
-        if (value1 === "") {
+        // first click - set value1 to the clicked value
+        if ((value1 === "") && (operator === null)) {
+            let newValue = "" + value;
+            setValue1(newValue);
+            setDisplay(newValue);
+            setClear("C");
+        // keep concating on value1 until an operator is clicked
+        } else if((value1 !== "") && (operator === null)) {
             let newValue = "" + value1 + value;
             setValue1(newValue);
             setDisplay(newValue);
+            setClear("C");
+        // if an operator exists, neither condition above will be met, and we build value2
+        } else if((value2 === "") && (operator !== null)) {
+            let secondValue = "" + value;
+            setValue2(secondValue);
+            setDisplay(secondValue);
             setClear("C");
         } else {
             let secondValue = "" + value2 + value;
             setValue2(secondValue);
             setDisplay(secondValue);
+            setClear("C");
         }
     };
 
@@ -31,7 +45,6 @@ const Layout = () => {
     const operatorClicked = (value) => {
         if (operator === null) {
             setOperator(value);
-            console.log(value);
         } else {
             switch (operator) {
                 case "÷":
@@ -89,16 +102,40 @@ const Layout = () => {
 
     // when C is clicked, clear all values, and operators
     const clearValues = () => {
-        if(value1 === "") {
-            setClear("AC");
-        } else if((value1 !== "") && (operator !== null)) {
-            setOperator(null)
-        } else {
-            setClear("AC");
+        if(value1 !== "" && (operator === null) && (value2 === "")) {
             setValue1("");
             setDisplay(0);
+            setClear("AC");
+        } else if((value1 !== "") && (operator !== null) && (value2 === "")) {
+            setOperator(null)
+            setClear("AC");
+        } else if((value1 !== "") && (operator !== null) && (value2 !== "")) {
+            setValue2("")
+            setDisplay(0);
+            setClear("AC");
+        } else {
+            setValue1("");
+            setValue2("");
+            setOperator(null)
+            setDisplay(0);
+            setClear("AC");
         }
     }
+
+    // every time value1 changes, log it
+    useEffect(() => {
+        console.log(`value1: ${value1}`)
+    }, [value1])
+
+    // every time value2 changes, log it
+    useEffect(() => {
+        console.log(`value2: ${value2}`)
+    }, [value2])
+
+    // every time operator changes, log it
+    useEffect(() => {
+        console.log(`operator: ${operator}`)
+    }, [operator])
 
     return (
         <div className='App'>
