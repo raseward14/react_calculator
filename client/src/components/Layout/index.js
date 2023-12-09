@@ -43,12 +43,14 @@ const Layout = () => {
 
     // when operators are clicked; store value, add operator
     const operatorClicked = (value) => {
-        if (operator === null) {
+        if ((operator === null) || (operator === "cleared")) { 
             setOperator(value);
+            console.log(`operator is ${value}`)
         } else {
             switch (operator) {
                 case "÷":
                     {
+                        console.log('performed division')
                         const divide = () => {
                             let newDisplay = JSON.parse(value1) / JSON.parse(value2);
                             setDisplay(newDisplay);
@@ -58,6 +60,8 @@ const Layout = () => {
                     break;
                 case "x":
                     {
+                        console.log('performed multiplication')
+
                         const multiply = () => {
                             let newDisplay = JSON.parse(value1) * JSON.parse(value2);
                             setDisplay(newDisplay);
@@ -68,6 +72,7 @@ const Layout = () => {
                     break;
                 case "-":
                     {
+                        console.log('performed subtraction')
                         const subtract = () => {
                             let newDisplay = JSON.parse(value1) - JSON.parse(value2);
                             setDisplay(newDisplay);
@@ -77,6 +82,7 @@ const Layout = () => {
                     break;
                 case "+":
                     {
+                        console.log('performed addition')
                         const add = () => {
                             console.log('made it here');
                             let newDisplay = JSON.parse(value1) + JSON.parse(value2);
@@ -117,7 +123,6 @@ const Layout = () => {
             setDisplay(0);
             setClear("AC");
             console.log('clear value2 only')
-
         } else {
             setValue1("");
             setValue2("");
