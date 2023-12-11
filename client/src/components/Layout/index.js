@@ -54,6 +54,9 @@ const Layout = () => {
                         const divide = () => {
                             let newDisplay = JSON.parse(value1) / JSON.parse(value2);
                             setDisplay(newDisplay);
+                            setValue1(newDisplay);
+                            setValue2("");
+                            setOperator(null);
                         };
                         divide();
                     }
@@ -65,7 +68,9 @@ const Layout = () => {
                         const multiply = () => {
                             let newDisplay = JSON.parse(value1) * JSON.parse(value2);
                             setDisplay(newDisplay);
-    
+                            setValue1(newDisplay);
+                            setValue2("");
+                            setOperator(null);
                         };
                         multiply();
                     }
@@ -76,6 +81,9 @@ const Layout = () => {
                         const subtract = () => {
                             let newDisplay = JSON.parse(value1) - JSON.parse(value2);
                             setDisplay(newDisplay);
+                            setValue1(newDisplay);
+                            setValue2("");
+                            setOperator(null);
                         };
                         subtract();
                     }
@@ -87,6 +95,9 @@ const Layout = () => {
                             console.log('made it here');
                             let newDisplay = JSON.parse(value1) + JSON.parse(value2);
                             setDisplay(newDisplay);
+                            setValue1(newDisplay);
+                            setValue2("");
+                            setOperator(null);
                         };
                         add();
                     };
@@ -94,6 +105,9 @@ const Layout = () => {
                 default:
                     const equal = () => {
                         setValue1(value2);
+                        setValue2("");
+                        setOperator(null);
+
                     };
                     break;
             }
