@@ -117,6 +117,17 @@ const Layout = () => {
     // when percent is clicked, change the value, move decimal place twice to the left
 
     // when +/- is clicked, change from positive to negative, and from negative to positive
+    const positiveNegative = (value) => {
+        let newValue = value *= -1;
+        if(operator) {
+            setValue2(newValue);
+            setDisplay(newValue);
+        } else {
+            setValue1(newValue);
+            setDisplay(newValue);
+        }
+        // console.log(JSON.parse(value) + JSON.parse(value));
+    };
 
     // when C is clicked, clear all values, and operators
     const clearValues = () => {
@@ -144,22 +155,22 @@ const Layout = () => {
             console.log('clear everything')
 
         }
-    }
+    };
 
     // every time value1 changes, log it
     useEffect(() => {
         console.log(`value1: ${value1}`)
-    }, [value1])
+    }, [value1]);
 
     // every time value2 changes, log it
     useEffect(() => {
         console.log(`value2: ${value2}`)
-    }, [value2])
+    }, [value2]);
 
     // every time operator changes, log it
     useEffect(() => {
         console.log(`operator: ${operator}`)
-    }, [operator])
+    }, [operator]);
 
     return (
         <div className='App'>
@@ -208,7 +219,7 @@ const Layout = () => {
                                 <tr className='left-center-column'>
                                     <tr className='left-center-row darker'
                                         onClick={() => {
-                                            operatorClicked('+');
+                                            positiveNegative(display);
                                         }}>
                                         <td>+/-</td>
                                     </tr>
