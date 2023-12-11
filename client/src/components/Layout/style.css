@@ -66,6 +66,9 @@
     border: 0.5px solid black;
     flex-grow: 1;
 }
+.left-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
+}
 .left-row > * {
     margin: auto;
 }
@@ -81,6 +84,9 @@
     display: flex;
     border: 0.5px solid black;
     height: 80%;
+}
+.left-center-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
 }
 .left-center-row > * {
     margin: auto;
@@ -98,6 +104,9 @@
     display: flex;
     border: 0.5px solid black;
     height: 100%;
+}
+.right-row:active {
+    background-color: rgba(171, 167, 167, 0.718);
 }
 .right-row > * {
     margin: auto;
@@ -119,4 +128,8 @@
 .darker {
     background-color: rgba(6, 6, 6, 0.718);
 
+}
+
+.fadedClass {
+    background-color: rgba(171, 167, 167, 0.718);
 }

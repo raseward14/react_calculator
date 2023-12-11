@@ -104,8 +104,6 @@ const Layout = () => {
 
     // when +/- is clicked, change from positive to negative, and from negative to positive
 
-    // when a value exists, AC changes to C
-
     // when C is clicked, clear all values, and operators
     const clearValues = () => {
         if(value1 !== "" && ((operator === null) || (operator === "cleared")) && (value2 === "")) {
