@@ -115,6 +115,16 @@ const Layout = () => {
     };
 
     // when percent is clicked, change the value, move decimal place twice to the left
+    const makePercent= (value) => {
+        let newValue = value/100;
+        if(operator) {
+            setValue2(newValue);
+            setDisplay(newValue);
+        } else {
+            setValue1(newValue);
+            setDisplay(newValue);
+        };
+    };
 
     // when +/- is clicked, change from positive to negative, and from negative to positive
     const positiveNegative = (value) => {
@@ -125,8 +135,7 @@ const Layout = () => {
         } else {
             setValue1(newValue);
             setDisplay(newValue);
-        }
-        // console.log(JSON.parse(value) + JSON.parse(value));
+        };
     };
 
     // when C is clicked, clear all values, and operators
@@ -245,7 +254,7 @@ const Layout = () => {
                                 <tr className='left-columns'>
                                     <tr className='left-row darker'
                                         onClick={() => {
-                                            operatorClicked('/100');
+                                            makePercent(display);
                                         }}>
                                         <td>%</td>
                                     </tr>
