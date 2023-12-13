@@ -1,8 +1,9 @@
 {
   "short_name": "React App",
   "name": "React MacOS Calculator Clone",
-  "manifest_version": 3,
+  "version": "1.0.0",
   "description": "This is a clone of the native MacOS calculator application.",
+  "manifest_version": 3,
   "author": "Richard Seward",
   "action": {
     "default_popup": "index.html",
