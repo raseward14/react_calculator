@@ -82,7 +82,6 @@ tr.left-center-column{
 .left-center-column {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     padding: 0px;
     height: 80%;
 }
@@ -98,9 +97,11 @@ tr.left-center-column{
     margin: auto;
 }
 
+tr.right-side {
+    width: 25%;
+}
 .right-side {
     background-color: rgb(251, 134, 0);
-    flex-grow: 1;
     border-bottom-right-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -128,7 +129,7 @@ tr.left-center-column{
 
 .left-corner {
     border-bottom-left-radius: 15px;
-    width: 202%;
+    width: 201%;
 }
 
 .darker {

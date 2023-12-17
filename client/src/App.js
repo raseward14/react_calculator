@@ -1,5 +1,5 @@
 import Layout from '../src/components/Layout';
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Routes,
   Route
