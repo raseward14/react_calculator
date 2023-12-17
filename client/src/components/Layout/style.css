@@ -61,7 +61,8 @@ tr.left-columns {
 .left-columns {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    /* flex-grow: 1;
+    padding: 0px; */
 }
 .left-row {
     display: flex;
