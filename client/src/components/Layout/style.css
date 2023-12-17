@@ -76,6 +76,9 @@ tr.left-columns {
     margin: auto;
 }
 
+tr.left-center-column{
+    width: 34%;
+}
 .left-center-column {
     display: flex;
     flex-direction: column;
