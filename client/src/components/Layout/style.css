@@ -55,11 +55,14 @@
     flex-grow: 5;
 }
 
+tr.left-columns {
+    width: 33%;
+}
 .left-columns {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    padding: 0px;
+    /* flex-grow: 1;
+    padding: 0px; */
 }
 .left-row {
     display: flex;
