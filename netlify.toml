@@ -1,1 +1,2 @@
-build = "client/build"
+[build]
+  command = "npm run build"
