@@ -53,6 +53,7 @@ const Layout = () => {
                         console.log('performed division')
                         const divide = () => {
                             let newDisplay = JSON.parse(value1) / JSON.parse(value2);
+                            // newDisplay.toFixed(2);
                             setDisplay(newDisplay);
                             setValue1(newDisplay);
                             setValue2("");
@@ -129,12 +130,14 @@ const Layout = () => {
     // when +/- is clicked, change from positive to negative, and from negative to positive
     const positiveNegative = (value) => {
         let newValue = value *= -1;
-        if(operator) {
+        if(value2) {
             setValue2(newValue);
             setDisplay(newValue);
-        } else {
+        } else if (value1) {
             setValue1(newValue);
             setDisplay(newValue);
+        } else {
+            console.log('no value yet!')
         };
     };
 
