@@ -1,2 +1,2 @@
 [build]
-  command = "cd client && npm install && npm start"
+  command = "npm run start"
